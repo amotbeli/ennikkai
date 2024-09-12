@@ -15,7 +15,6 @@ def to_panmai(string):
     string = tamil.utf8.get_letters(string)
     last_letter = tamil.utf8.splitMeiUyir(string[-1])
     nedils = tamil.utf8.nedil_letters
-    print(nedils)
     if string[-1] == "ம்":
         string[-1] = "ங்"
     elif string[-1] == "ல்" and len(string) == 2:
