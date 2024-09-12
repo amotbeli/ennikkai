@@ -13,7 +13,6 @@ def main():
 
 def to_panmai(string):
     string = tamil.utf8.get_letters(string)
-    print(string)
     last_letter = tamil.utf8.splitMeiUyir(string[-1])
     nedils = tamil.utf8.nedil_letters
     if string[-1] == "ம்":
