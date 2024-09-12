@@ -30,6 +30,7 @@ The conversion is based on the following six grammatical rules in Tamil:
 
 6. **Rule 5: நெடில் எழுத்தில் முடியும் சொல்லுடன் "கள்" சேரும்போது "க்" தோன்றும்**
    - Example: புறா + கள் = புறாக்கள்
+   - Possible exception: The letter "ஐ". For example, கலை + கள் = கலைகள்
 
 ## Grammar Source
 
