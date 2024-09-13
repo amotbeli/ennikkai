@@ -13,8 +13,10 @@ def main():
 
 def to_panmai(string):
     string = tamil.utf8.get_letters(string)
-    last_letter = tamil.utf8.splitMeiUyir(string[-1])
+    last_letter_split = tamil.utf8.splitMeiUyir(string[-1])
+    first_letter_split = tamil.utf8.splitMeiUyir(string[-2])
     nedils = tamil.utf8.nedil_letters
+    kurils = tamil.utf8.kuril_letters
     if string[-1] == "ம்":
         string[-1] = "ங்"
     elif string[-1] == "ல்" and len(string) == 2:
@@ -23,7 +25,9 @@ def to_panmai(string):
         string[-1] = "ட்"
     elif len(string) == 1:
         string[-1] += "க்"
-    elif last_letter[-1] in nedils and last_letter[-1] != "ஐ":
+    elif last_letter_split[-1] in nedils and last_letter_split[-1] != "ஐ":
+        string[-1] += "க்"
+    elif len(string) == 2 and first_letter_split[-1] in kurils and last_letter_split[-1] in kurils:
         string[-1] += "க்"
     string = "".join(string)
     output = string + "கள்"
