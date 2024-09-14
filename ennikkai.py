@@ -17,22 +17,22 @@ def to_panmai(string):
     first_letter_split = tamil.utf8.splitMeiUyir(string_list[-2])
     nedils = tamil.utf8.nedil_letters
     kurils = tamil.utf8.kuril_letters
-    # படம்+கள் = படங்கள்
+    # படம் -> படங்(கள்)
     if string_list[-1] == "ம்":
         string_list[-1] = "ங்"
-    # பல்+கள் = பற்கள் (but அணில்+கள் != அணிற்கள்)
+    # பல் -> பற்(கள்) (but not அணில் -> அணிற்(கள்))
     elif string_list[-1] == "ல்" and len(string_list) == 2:
         string_list[-1] = "ற்"
-    # முள்+கள் = முட்கள்
+    # முள் -> முட்(கள்)
     elif string_list[-1] == "ள்":
         string_list[-1] = "ட்"
-    # பூ+கள் = பூக்கள்
+    # பூ -> பூக்(கள்)
     elif len(string_list) == 1:
         string_list[-1] += "க்"
-    # புறா+கள் = புறாக்கள் (but கலை+கள் != கலைக்கள்)
+    # புறா -> புறாக்(கள்) (but not கலை -> கலைக்(கள்))
     elif last_letter_split[-1] in nedils and last_letter_split[-1] != "ஐ":
         string_list[-1] += "க்"
-    # பசு+கள் = பசுக்கள்
+    # பசு -> பசுக்(கள்)
     elif len(string_list) == 2 and first_letter_split[-1] in kurils and last_letter_split[-1] in kurils:
         string_list[-1] += "க்"
     string = "".join(string_list)

@@ -1,16 +1,16 @@
 # ennikkai - Tamil Singular-Plural Converter
 
-This Python program converts singular Tamil words into their plural forms and vice versa, based on six rules of Tamil grammar.
+This Python program converts singular Tamil words into their plural forms and vice versa, based on the rules of Tamil grammar.
 
 ## Features
 
 - Converts singular Tamil words to their plural forms.
 - Converts plural Tamil words to their singular forms.
-- Follows six grammatical rules in Tamil for conversion.
+- Follows the grammatical rules in Tamil for such conversion.
 
 ## Grammar Rules
 
-The conversion is based on the following six grammatical rules in Tamil:
+The conversion is based on the following grammatical rules in Tamil:
 
 1. **Rule 1: பொதுவாக ஒருமைச் சொற்கள் பன்மையாகும்போது "கள்" விகுதி ஏற்படும்**
    - Example: கலை + கள் = கலைகள்
