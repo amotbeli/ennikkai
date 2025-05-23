@@ -27,6 +27,7 @@ The conversion is based on the following grammatical rules in Tamil:
 
 5. **Rule 5: ஓரெழுத்து ஒருமொழியுடன் "கள்" சேரும்போது "க்" தோன்றும்**
    - Example: பூ + கள் = பூக்கள் 
+   - Exception: "ஐ". For example, பை, மை, கை + கள் = கைகள்
 
 6. **Rule 6: நெடில் எழுத்தில் முடியும் சொல்லுடன் "கள்" சேரும்போது "க்" தோன்றும்**
    - Example: புறா + கள் = புறாக்கள்

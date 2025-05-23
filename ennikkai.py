@@ -14,7 +14,8 @@ def main():
 def to_panmai(string):
     string_list = tamil.utf8.get_letters(string)
     last_letter_split = tamil.utf8.splitMeiUyir(string_list[-1])
-    first_letter_split = tamil.utf8.splitMeiUyir(string_list[-2])
+    if (len(string_list) > 1):
+        first_letter_split = tamil.utf8.splitMeiUyir(string_list[-2])
     nedils = tamil.utf8.nedil_letters
     kurils = tamil.utf8.kuril_letters
     # படம் -> படங்(கள்)
@@ -27,7 +28,7 @@ def to_panmai(string):
     elif string_list[-1] == "ள்":
         string_list[-1] = "ட்"
     # பூ -> பூக்(கள்)
-    elif len(string_list) == 1:
+    elif (len(string_list) == 1 and last_letter_split[-1] != "ஐ"):
         string_list[-1] += "க்"
     # புறா -> புறாக்(கள்) (but not கலை -> கலைக்(கள்))
     elif last_letter_split[-1] in nedils and last_letter_split[-1] != "ஐ":
